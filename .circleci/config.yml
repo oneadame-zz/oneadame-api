@@ -6,6 +6,9 @@ orbs:
 jobs:
   build-and-test:
     executor: python/default
+    environment: 
+      ENV: TEST
+      api: '{"email_recipients":"foo@bar.com", "mailgun":"mockmailgunapitoken","grecaptcha":"mockgrecaptchaapitoken"}'
     steps:
       - checkout
       - python/load-cache
