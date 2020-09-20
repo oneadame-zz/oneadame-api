@@ -12,6 +12,8 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
+          command: sudo python -m pip install pytest
+      - run:
           command: pytest
           name: Test
 
