@@ -2,6 +2,7 @@ from flask import request
 import requests
 import logging
 import pytest
+from time import sleep
 from main import app, mg_api, gre_api, retry
 
 
@@ -110,4 +111,5 @@ def test_gre_bad(client, mock_api_bad, caplog):
         },
     )
     assert resp.status_code == 204
+    sleep(1)
     assert "False" in caplog.text

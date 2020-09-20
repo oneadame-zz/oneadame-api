@@ -6,8 +6,6 @@ from threading import Thread
 import requests
 from flask import Flask, request, make_response, Response
 import logging
-import boto3
-from botocore.exceptions import ClientError
 
 app = Flask(__name__)
 mg_api = "https://api.mailgun.net/v3/mg.oneadame.com/messages"
